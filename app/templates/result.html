@@ -11,19 +11,9 @@
 {% block content %}
 <div class="container">
     <h4 class="text-center">~ Calculation Result ~</h4>
-    <!--    search button-->
-    <form class="form-inline my-2 my-lg-0 justify-content-end">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
 
     <table class="table table-hover table-bordered border-primary table-dark table-striped">
-        <tr>
-            <th>Value 1</th>
-            <th>Value 2</th>
-            <th>Operation</th>
-            <th>Result</th>
-        </tr>
+
         <tr>
             <td>{{ value1 }}</td>
             <td>{{ value2 }}</td>
@@ -34,30 +24,9 @@
 
 </div>
 
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-{% for message in messages %}
-<div class="alert alert-success" role="alert">
-    {{ message }}
-</div>
-{% endfor %}
-{% endif %}
-{% endwith %}
 
 
-<!--    Pagination-->
-<div class="container">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination pagination-circle pg-blue justify-content-end">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-            </li>
+
             <table id="data" class="table table-striped">
     <thead>
       <tr>
